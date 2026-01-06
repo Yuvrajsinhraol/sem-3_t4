@@ -1,0 +1,11 @@
+import streamlit as st
+st.title("selection Widget Demo")
+course=st.selectbox("select COurse:",['Python-1','FSD-1','PS','DE'])
+preffered_days=st.multiselect("Preffered days for extra lec",['Monday ','Tuesday','Wednusday','THursday','Friday ','Saturday'])
+delivery_mode=st.radio("Prefered Delivery Mode:",['offline','online','hybrid'])
+subscribe=st.checkbox("Subscribe to course updates")
+st.write("---")
+st.write(f"**Course:** {course}")
+st.write(f"**Prefered Days:** {','.join(preffered_days) if preffered_days else 'None'}")
+st.write(f"**Delivery Mode :** {delivery_mode}")
+st.write(f"**subscribed:** {'Yes' if subscribe else 'No'}")
